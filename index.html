@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		body{
+			margin: 0;
+			padding: 0;
+		}
+		.bg_image{
+			height: 100vh;
+			background-attachment: fixed;
+			width: 100%;
+		}
+		.next_div{
+			height: 100vh;
+		    width: 100%;
+		    background-color: #f6f6f6;
+		}
+	</style>
+</head>
+
+<body>
+    <div class="bg_image" style="background-image: url('mask-image.jpg');"></div>
+	<div class="next_div"></div>
+
+	<script src="jquery.js"></script>
+    <script>
+    	$(function(){
+    		$(window).scroll(function(){
+    			var top = $(window).scrollTop()/8;
+    			$('.bg_image').css('background-position-x', - top + 'px');
+    		});
+    	});
+    </script>
+</body>
+
+</html>
